@@ -1,0 +1,15 @@
+class Solution:
+    def findSum(self, n: int) -> int:
+        mySum = 0
+        for char in str(n):
+            mySum += pow(int(char), 2)
+        return mySum
+    
+    def isHappy(self, n: int) -> bool:
+        myTable = set()
+        while n not in myTable:
+            myTable.add(n)
+            n = self.findSum(n)
+            if n == 1:
+                return True
+        return False
