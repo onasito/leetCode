@@ -1,0 +1,12 @@
+class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        // iterate through string
+        for (int i = 0; i < haystack.size(); i++)
+        {
+            string check = haystack.substr(i, needle.size());
+            if (check == needle){return i;}
+        }
+        return -1;
+    }
+};
