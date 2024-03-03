@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) {
+        vector<int> myVec;
+        for (int i = 0; i < nums.size(); i++)
+        {
+            if (nums[i] != val)
+            {
+                myVec.push_back(nums[i]);
+            }
+        }
+        nums = myVec;
+        int k = nums.size();
+        return k;
+    }
+};
